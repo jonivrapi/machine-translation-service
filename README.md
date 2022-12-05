@@ -1,5 +1,6 @@
 # Machine Translation Service
-Translation flask API for the Helsinki NLP models available in the [Huggingface Transformers library](https://huggingface.co/Helsinki-NLP). 
+
+Translation flask API for the Helsinki NLP models available in the [Huggingface Transformers library](https://huggingface.co/Helsinki-NLP).
 
 ## Usage
 
@@ -18,6 +19,8 @@ pip install -r requirements.txt
 python app.py
 ```
 
+> Locally, this runs on port 3000.
+
 To run with docker:
 
 ```
@@ -28,6 +31,7 @@ docker run -p 5000:5000 -v $(pwd)/data:/app/data -it machine-translation-service
 The front end should then become available at http://localhost:5000.
 
 Call the service with curl:
+
 ```
 curl --location --request POST 'http://localhost:5000/translate' \
 --header 'Content-Type: application/json' \
@@ -37,4 +41,5 @@ curl --location --request POST 'http://localhost:5000/translate' \
  "target":"fr"
 }'
 ```
+
 # machine-translation-service
